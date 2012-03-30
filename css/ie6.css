@@ -1,0 +1,10 @@
+.slider-links a {background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/link-inactive.png', sizingMethod='image');}
+
+.slider-links a.active {background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/link-active.png', sizingMethod='image');}
+
+.img-border {background-image: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/footer-img-border.png', sizingMethod='image');}
+
+.comment { height: 100px; }
