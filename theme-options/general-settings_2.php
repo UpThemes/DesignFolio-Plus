@@ -14,12 +14,12 @@
 
 $options = array (
 
-		array(	"name" => "Flickr ID",
-						"desc" => "Enter your Flickr ID (not your username) to display thumbnail items on the homepage.",
-						"id" => "flickr",
-						"type" => "text",
-						"value" => "dellustrations"),
-			
+    array(  "name" => "Flickr ID",
+            "desc" => "Enter your Flickr ID (not your username) to display thumbnail items on the homepage.",
+            "id" => "flickr",
+            "type" => "text",
+            "value" => "dellustrations"),
+      
 );
 
 /* ------------ Do not edit below this line ----------- */

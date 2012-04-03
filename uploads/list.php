@@ -1,7 +1,7 @@
 <style type="text/css">
-	img {max-width:250px; max-height:250px; border:none;}
-	a {display:block;}
-	
+  img {max-width:250px; max-height:250px; border:none;}
+  a {display:block;}
+  
 </style>
 <?php
 $pageURL = 'http';

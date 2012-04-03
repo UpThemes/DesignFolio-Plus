@@ -50,27 +50,27 @@ h1#logo a{ background-image: url("<? echo bloginfo('template_url') . "/timthumb/
 
 <?php if(is_home()){ ?>
 
-	<?php if($up_options->bgimage_homepage){ ?>
-	.heading{ background-image: url(<? echo $up_options->bgimage_homepage; ?>)}
-	.breadcrumb{ background: <? echo $up_options->bgcolor; ?> }
-	<?php } 
-	      if($up_options->bgcolor){ ?>
-	.heading, .breadcrumb{ background-color: <? echo $up_options->bgcolor; ?>}
-	<?php } ?>
+  <?php if($up_options->bgimage_homepage){ ?>
+  .heading{ background-image: url(<? echo $up_options->bgimage_homepage; ?>)}
+  .breadcrumb{ background: <? echo $up_options->bgcolor; ?> }
+  <?php } 
+        if($up_options->bgcolor){ ?>
+  .heading, .breadcrumb{ background-color: <? echo $up_options->bgcolor; ?>}
+  <?php } ?>
 
 <?php } else { ?>
-	
-	<?php if($up_options->bgimage_inner){ ?>
-	.heading,
-	.breadcrumb{ background-image: url(<? echo $up_options->bgimage_inner; ?>)}
-	<?php }
-		  if($up_options->bgcolor){?>
-	.breadcrumb{ background: <? echo $up_options->bgcolor; ?> }
-	<?php } 
-	      if($up_options->bgcolor){ ?>
-	.heading, .breadcrumb{ background-color: <? echo $up_options->bgcolor; ?>}
-	<?php } ?>
-	
+  
+  <?php if($up_options->bgimage_inner){ ?>
+  .heading,
+  .breadcrumb{ background-image: url(<? echo $up_options->bgimage_inner; ?>)}
+  <?php }
+      if($up_options->bgcolor){?>
+  .breadcrumb{ background: <? echo $up_options->bgcolor; ?> }
+  <?php } 
+        if($up_options->bgcolor){ ?>
+  .heading, .breadcrumb{ background-color: <? echo $up_options->bgcolor; ?>}
+  <?php } ?>
+  
 <?php } ?>
 
 <?php if($up_options->welcome_text_color){?>
@@ -84,15 +84,15 @@ h1#logo a{ background-image: url("<? echo bloginfo('template_url') . "/timthumb/
 <?php wp_head(); ?>
 
 </head>
-	<body class="<?php thematic_body_class(); ?>">
-		<div id="header">
-			<div class="shell">
-				<div class="cl">&nbsp;</div>
-				<h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php echo bloginfo('title') . " // " . bloginfo('description'); ?></a></h1>				
+  <body class="<?php thematic_body_class(); ?>">
+    <div id="header">
+      <div class="shell">
+        <div class="cl">&nbsp;</div>
+        <h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><?php echo bloginfo('title') . " // " . bloginfo('description'); ?></a></h1>       
         <ul class="navigation">
           <li><a href="<?php bloginfo('home') ?>">Home</a></li>
-					<?php wp_list_pages__design_folio(); /*wp_list_pages('title_li=&link_after=<span class="hide-if-no-js">|</span>');*/ ?>
+          <?php wp_list_pages__design_folio(); /*wp_list_pages('title_li=&link_after=<span class="hide-if-no-js">|</span>');*/ ?>
         </ul>
-				<div class="cl">&nbsp;</div>
-			</div>
-		</div>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>

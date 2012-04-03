@@ -23,23 +23,23 @@ global $up_options;
 
       <div id="slider">
     
-		<?php
-		global $up_options;
-		$count==0;
-		$id = get_cat_id($up_options->portfolio);
-		if(!$up_options->portfolio_number)
-			$showposts = "&showposts=".$up_options->portfolio_number;
-		$q = "cat=" . $id . $showposts;
-		$portfolio = new WP_Query();  
-		$portfolio->query($q);
-		while($portfolio->have_posts()) : $portfolio->the_post();
-			$category = get_the_category(); 
+    <?php
+    global $up_options;
+    $count==0;
+    $id = get_cat_id($up_options->portfolio);
+    if(!$up_options->portfolio_number)
+      $showposts = "&showposts=".$up_options->portfolio_number;
+    $q = "cat=" . $id . $showposts;
+    $portfolio = new WP_Query();  
+    $portfolio->query($q);
+    while($portfolio->have_posts()) : $portfolio->the_post();
+      $category = get_the_category(); 
         ?>
         
           <div class="slidecontainer">
 
-						<a href="<?php the_permalink(); ?>">
-							<?php if(get_post_meta($post->ID, 'featured-image', true)){ ?>
+            <a href="<?php the_permalink(); ?>">
+              <?php if(get_post_meta($post->ID, 'featured-image', true)){ ?>
               <?php echo '<img src="' . get_bloginfo('template_url') . '/timthumb/timthumb.php?src=' . get_post_meta($post->ID, 'featured-image', true) . '&w=580&h=350&zc=1\'" alt="' . get_the_title() . '"/>'; ?>
               <?php } elseif(catch_that_image()){?>
               <img src="<?php echo catch_that_image(); ?>" alt="<?php the_title(); ?>" />
@@ -48,16 +48,16 @@ global $up_options;
                         
           </div>
           
-				<?php
-					$count++;
-					endwhile;
-				?>
+        <?php
+          $count++;
+          endwhile;
+        ?>
         
         </div><!-- /#slider -->
         
         <div id="controller"> 
         <?php
-					$count = $count-1;
+          $count = $count-1;
           while($i <= $count): ?>
             <span class="jFlowControl"><?php echo $i; ?></span>
         <?php
@@ -71,17 +71,17 @@ global $up_options;
   </div>
   
   <div class="slider-two">
-  	<div class="inner">
-			<?php
-				while($portfolio->have_posts()) : $portfolio->the_post();
-				$category = get_the_category(); 
-			?>
-			<div class="container">
-			<?php echo '<div class="category"><span>' . $category[0]->cat_name . '</span></div>'; ?>
-			<?php echo '<h2 class="title">' . get_the_title() . '</h2>'; ?>
-			<?php echo '<div class="description">' . get_the_excerpt() . '</div>'; ?>
-			</div>
-			<?php endwhile; ?>
+    <div class="inner">
+      <?php
+        while($portfolio->have_posts()) : $portfolio->the_post();
+        $category = get_the_category(); 
+      ?>
+      <div class="container">
+      <?php echo '<div class="category"><span>' . $category[0]->cat_name . '</span></div>'; ?>
+      <?php echo '<h2 class="title">' . get_the_title() . '</h2>'; ?>
+      <?php echo '<div class="description">' . get_the_excerpt() . '</div>'; ?>
+      </div>
+      <?php endwhile; ?>
     </div>
   </div>
 
